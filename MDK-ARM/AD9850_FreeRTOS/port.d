@@ -1,0 +1,12 @@
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ad9850_freertos\port.o: D:\software\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+ad9850_freertos\port.o: D:\software\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+ad9850_freertos\port.o: ../Core/Inc/FreeRTOSConfig.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ad9850_freertos\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
