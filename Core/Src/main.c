@@ -27,7 +27,7 @@
 #include "AD985x.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-demo
+//demo
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
