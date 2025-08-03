@@ -55,3 +55,6 @@ ad9850_freertos\main.o: ../Core/Inc/usart.h
 ad9850_freertos\main.o: ../Core/Inc/gpio.h
 ad9850_freertos\main.o: ../Core/Inc/AD985x.h
 ad9850_freertos\main.o: ../Core/Inc/sys.h
+ad9850_freertos\main.o: ../Core/Inc/pwm.h
+ad9850_freertos\main.o: ../Core/Inc/delay.h
+ad9850_freertos\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

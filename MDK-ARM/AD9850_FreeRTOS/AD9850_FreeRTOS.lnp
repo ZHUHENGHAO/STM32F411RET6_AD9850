@@ -12,6 +12,8 @@
 "ad9850_freertos\dma.o"
 "ad9850_freertos\tim.o"
 "ad9850_freertos\usart.o"
+"ad9850_freertos\pwm.o"
+"ad9850_freertos\delay.o"
 "ad9850_freertos\stm32f4xx_hal_rcc.o"
 "ad9850_freertos\stm32f4xx_hal_rcc_ex.o"
 "ad9850_freertos\stm32f4xx_hal_flash.o"

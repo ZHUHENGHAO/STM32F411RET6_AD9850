@@ -33,6 +33,8 @@
 #include "usart.h"
 #include "tim.h"
 #include "dma.h"
+#include "pwm.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,6 +63,7 @@ osThreadId AD9850initTaskHandle;
 osThreadId AD9850CTRTaskHandle;
 osThreadId ADCTaskHandle;
 osThreadId ADCProcessTaskHandle;
+osThreadId PWMTaskHandle;
 
 osMessageQId Delayms_QueueHandle;
 uint8_t Dealyms_QueueBuffer[ 1 * sizeof( uint16_t ) ];
@@ -82,6 +85,8 @@ void AD9850init_Task(void const * argument);
 void AD9850CTR_Task(void const * argument);
 void ADC_Init_Task(void const *argument);  // 新增：ADC初始化任务
 void ADC_Process_Task(void const *argument);  // 新增：ADC数据处理任务
+void PWM_Task(void const * argument);
+
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -163,6 +168,9 @@ void MX_FREERTOS_Init(void) {
 	  //处理采集信息、再次启动任务
   osThreadDef(ADCProcessTask, ADC_Process_Task, osPriorityNormal, 0, 256);
   ADCProcessTaskHandle = osThreadCreate(osThread(ADCProcessTask), NULL);
+	
+	 osThreadDef(PWMTask, PWM_Task, osPriorityAboveNormal, 0, 128);
+   PWMTaskHandle = osThreadCreate(osThread(PWMTask), NULL);
    /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -212,6 +220,7 @@ void Button_Task(void const * argument)
 	uint8_t current_index = 0;
 	uint16_t delay_option[4] = {200,500,1000,2000};
 	double DDS_Freq = 10000;
+	uint8_t flag = 0;
   /* Infinite loop */
   for(;;)
   {
@@ -228,8 +237,11 @@ void Button_Task(void const * argument)
 
 			if(stop_times <= 1000)//短按1s内
 			{
+//				flag++;
 				current_index = (current_index+1)%(sizeof(delay_option)/sizeof(delay_option[0]));
 				xQueueSend(Delayms_QueueHandle,&delay_option[current_index],pdMS_TO_TICKS(10));
+//				if(flag%2 == 1) TIM_SetTIM1Compare1(50);
+//				else TIM_SetTIM1Compare1(0);
 			}
 			if(stop_times >= 2000 && stop_times <= 3000)//短长按2s-3s内
 			{
@@ -243,6 +255,7 @@ void Button_Task(void const * argument)
 			}
 		}
 		
+//		TIM_SetTIM1Compare1(0);
 		last_Button_state = Current_Button_state;//状态更新
 		osDelay(10);//因为按键任务的优先级最高，为了其他低优先级任务能够被调度，这里需要在每次的循环后让出CPU方便执行其他任务
 
@@ -359,5 +372,21 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     // 释放信号量，通知处理任务 信号量＋1 变为可用状态
     osSemaphoreRelease(ADCDMA_SemHandle);
   }
+}
+
+
+void PWM_Task(void const * argument)
+{
+  /* USER CODE BEGIN LED_Task */
+
+  /* Infinite loop */
+  for(;;)
+  {
+		 TIM_SetTIM1Compare1(50);
+		 osDelay(1);              
+		 TIM_SetTIM1Compare1(0);
+		 osDelay(100);
+  }
+  /* USER CODE END LED_Task */
 }
 /* USER CODE END Application */

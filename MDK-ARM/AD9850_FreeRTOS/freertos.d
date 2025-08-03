@@ -55,3 +55,4 @@ ad9850_freertos\freertos.o: ../Core/Inc/adc.h
 ad9850_freertos\freertos.o: ../Core/Inc/usart.h
 ad9850_freertos\freertos.o: ../Core/Inc/tim.h
 ad9850_freertos\freertos.o: ../Core/Inc/dma.h
+ad9850_freertos\freertos.o: ../Core/Inc/pwm.h
