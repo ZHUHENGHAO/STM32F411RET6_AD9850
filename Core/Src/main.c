@@ -97,7 +97,7 @@ int main(void)
   MX_ADC1_Init();
   MX_USART1_UART_Init();
   MX_TIM3_Init();
-	TIM1_PWM_Init(100-1,1-1);
+	TIM1_PWM_Init(50-1,2-1);
 	delay_us(500);
 	HAL_UART_Transmit(&huart1, test_msg, sizeof(test_msg)-1, 1000);
   /* USER CODE END 2 */

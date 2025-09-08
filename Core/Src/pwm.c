@@ -1,87 +1,143 @@
 #include "pwm.h"
 
-TIM_HandleTypeDef 	TIM1_Handler;      	//定时器句柄 
-TIM_OC_InitTypeDef 	TIM1_CH1Handler;	//定时器1通道1句柄
-TIM_BreakDeadTimeConfigTypeDef TIM1_DeadTimeHandler; //死区配置句柄
+TIM_HandleTypeDef 	TIM1_Handler;      	//???????? 
+TIM_OC_InitTypeDef 	TIM1_CH1Handler;	//CH1??????
+TIM_OC_InitTypeDef 	TIM1_CH2NHandler;	//CH2N?????????????????
+TIM_BreakDeadTimeConfigTypeDef TIM1_DeadTimeHandler; //??????????
 
-//TIM1 互补PWM部分初始化 
-//arr：自动重装值
-//psc：时钟预分频数
-//定时器溢出时间计算方法:Tout=((arr+1)*(psc+1))/Ft us
-//Ft=定时器工作频率,单位:Mhz（TIM1挂载于APB2，最高100MHz）
+// ?????????????????????????
+volatile uint32_t pwm_burst_count = 0;
+volatile uint8_t pwm_burst_active = 0;
+
 void TIM1_PWM_Init(u16 arr,u16 psc)
 {  
-    TIM1_Handler.Instance=TIM1;         	//定时器1（高级控制定时器）
-    TIM1_Handler.Init.Prescaler=psc;       	//定时器分频
-    TIM1_Handler.Init.CounterMode=TIM_COUNTERMODE_UP;//向上计数模式
-    TIM1_Handler.Init.Period=arr;          	//自动重装载值
-    TIM1_Handler.Init.ClockDivision=TIM_CLOCKDIVISION_DIV1;//分频因子
-//    TIM1_Handler.Init.AutoReloadPreload=TIM_AUTORELOAD_PRELOAD_DISABLE;//禁止自动重装载预加载
-    TIM1_Handler.Init.RepetitionCounter=0;  //重复计数器值（高级定时器特有）
-    HAL_TIM_PWM_Init(&TIM1_Handler);       	//初始化PWM
+    // 1. ?????????????
+    TIM1_Handler.Instance=TIM1;          
+    TIM1_Handler.Init.Prescaler=psc;        
+    TIM1_Handler.Init.CounterMode=TIM_COUNTERMODE_UP;
+    TIM1_Handler.Init.Period=arr;           
+    TIM1_Handler.Init.ClockDivision=TIM_CLOCKDIVISION_DIV1;
+    TIM1_Handler.Init.RepetitionCounter=0;  // ????????0?????????????
+    HAL_TIM_PWM_Init(&TIM1_Handler);       	
+
+    // 2. ????CH1??PA8????????PWM1?????????????????
+    TIM1_CH1Handler.OCMode=TIM_OCMODE_PWM1; // PWM1????CNT<CCR???????????
+    TIM1_CH1Handler.Pulse=arr/2;            //????50%
+    TIM1_CH1Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //??????????
+    TIM1_CH1Handler.OCFastMode=TIM_OCFAST_DISABLE;
+    TIM1_CH1Handler.OCIdleState=TIM_OCIDLESTATE_SET; //?????????????????????
+    HAL_TIM_PWM_ConfigChannel(&TIM1_Handler,&TIM1_CH1Handler,TIM_CHANNEL_1);
+	
+    // 3. ????CH2N??PB0????????PWM1?????????????????
+    TIM1_CH2NHandler.OCMode=TIM_OCMODE_PWM2; //??CH1???
+    TIM1_CH2NHandler.Pulse=arr/2;            //??CH1?????
+    TIM1_CH2NHandler.OCNPolarity=TIM_OCNPOLARITY_HIGH; //?????????????????
+    TIM1_CH2NHandler.OCFastMode=TIM_OCFAST_DISABLE;
+    TIM1_CH2NHandler.OCNIdleState=TIM_OCNIDLESTATE_SET; //?????????????????????
+    HAL_TIM_PWM_ConfigChannel(&TIM1_Handler,&TIM1_CH2NHandler,TIM_CHANNEL_2);
+	
+    // 4. ????????
+    TIM1_DeadTimeHandler.OffStateRunMode=TIM_OSSR_DISABLE;
+    TIM1_DeadTimeHandler.OffStateIDLEMode=TIM_OSSI_DISABLE;
+    TIM1_DeadTimeHandler.LockLevel=TIM_LOCKLEVEL_OFF;
+    TIM1_DeadTimeHandler.DeadTime=2; //???????????
+    TIM1_DeadTimeHandler.BreakState=TIM_BREAK_DISABLE;
+    TIM1_DeadTimeHandler.BreakPolarity=TIM_BREAKPOLARITY_HIGH;
+    TIM1_DeadTimeHandler.AutomaticOutput=TIM_AUTOMATICOUTPUT_ENABLE;
+    HAL_TIMEx_ConfigBreakDeadTime(&TIM1_Handler,&TIM1_DeadTimeHandler);
     
-    //配置CH1主通道及CH1N互补通道
-    TIM1_CH1Handler.OCMode=TIM_OCMODE_PWM1; //模式选择PWM1
-    TIM1_CH1Handler.Pulse=0;            //设置比较值,占空比50%
-    TIM1_CH1Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //主通道输出极性高
-    TIM1_CH1Handler.OCNPolarity=TIM_OCPOLARITY_HIGH;//互补通道输出极性
-    TIM1_CH1Handler.OCFastMode=TIM_OCFAST_DISABLE; //禁止快速模式
-    TIM1_CH1Handler.OCIdleState=TIM_OCIDLESTATE_RESET; //空闲状态主通道输出复位
-    TIM1_CH1Handler.OCNIdleState=TIM_OCNIDLESTATE_RESET; //空闲状态互补通道输出复位
-    HAL_TIM_PWM_ConfigChannel(&TIM1_Handler,&TIM1_CH1Handler,TIM_CHANNEL_1);//配置TIM1通道1
-	
-//    //配置死区时间（防止上下桥臂直通）
-//    TIM1_DeadTimeHandler.OffStateRunMode=TIM_OSSR_DISABLE; //运行模式下关闭状态选择
-//    TIM1_DeadTimeHandler.OffStateIDLEMode=TIM_OSSI_DISABLE; //空闲模式下关闭状态选择
-//    TIM1_DeadTimeHandler.LockLevel=TIM_LOCKLEVEL_OFF; //锁定级别关闭
-//    TIM1_DeadTimeHandler.DeadTime=10; //死区时间（单位：定时器时钟周期，需根据实际需求调整）
-//    TIM1_DeadTimeHandler.BreakState=TIM_BREAK_DISABLE; //禁止刹车功能
-//    TIM1_DeadTimeHandler.BreakPolarity=TIM_BREAKPOLARITY_HIGH; //刹车信号极性
-//    TIM1_DeadTimeHandler.AutomaticOutput=TIM_AUTOMATICOUTPUT_DISABLE; //禁止自动输出
-//    HAL_TIMEx_ConfigBreakDeadTime(&TIM1_Handler,&TIM1_DeadTimeHandler);
-	
-    HAL_TIM_PWM_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启主通道PWM
-    HAL_TIMEx_PWMN_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启互补通道PWM
-	 	   
+    // 5. ???????????
+    __HAL_TIM_ENABLE_IT(&TIM1_Handler, TIM_IT_UPDATE);
 }
 
-//定时器底层驱动，时钟使能，引脚配置
-//此函数会被HAL_TIM_PWM_Init()调用
-//htim:定时器句柄
+//?????????????????????????????
+//???????HAL_TIM_PWM_Init()????
+//htim:????????
+//?????????????????????????????
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 {
 	GPIO_InitTypeDef GPIO_Initure;
 	
     if(htim->Instance==TIM1)
 	{
-		__HAL_RCC_TIM1_CLK_ENABLE();			//使能定时器1时钟（APB2总线）
+		__HAL_RCC_TIM1_CLK_ENABLE();			//???????1???
 		
-		__HAL_RCC_GPIOA_CLK_ENABLE();			//开启GPIOA时钟
+		__HAL_RCC_GPIOA_CLK_ENABLE();			//????GPIOA???
+		__HAL_RCC_GPIOB_CLK_ENABLE();			//????GPIOB???
 		
-		//配置PA8为TIM1_CH1（主通道）
+		//????PA8?TIM1_CH1?????????
 		GPIO_Initure.Pin=GPIO_PIN_8;            
-		GPIO_Initure.Mode=GPIO_MODE_AF_PP;  	//复用推挽输出
-		GPIO_Initure.Pull=GPIO_PULLUP;          //上拉
-		GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //高速
-		GPIO_Initure.Alternate=GPIO_AF1_TIM1;	//PA8复用为TIM1_CH1（AF1）
+		GPIO_Initure.Mode=GPIO_MODE_AF_PP;  	//???????????
+		GPIO_Initure.Pull=GPIO_PULLDOWN;        //????
+		GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //????
+		GPIO_Initure.Alternate=GPIO_AF1_TIM1;	//PA8?????TIM1_CH1
 		HAL_GPIO_Init(GPIOA,&GPIO_Initure); 	
 		
-		//配置PA7为TIM1_CH1N（互补通道）
-		GPIO_Initure.Pin=GPIO_PIN_7;            
-		GPIO_Initure.Alternate=GPIO_AF1_TIM1;	//PA7复用为TIM1_CH1N（AF1）
-		HAL_GPIO_Init(GPIOA,&GPIO_Initure); 	
+		//????PB0?TIM1_CH2N???????????
+		GPIO_Initure.Pin=GPIO_PIN_0;            
+		GPIO_Initure.Alternate=GPIO_AF1_TIM1;	//PB0?????TIM1_CH2N
+		HAL_GPIO_Init(GPIOB,&GPIO_Initure); 	
+		
+		// ????NVIC??????TIM1????????
+		HAL_NVIC_SetPriority(TIM1_UP_TIM10_IRQn, 0, 0);
+		HAL_NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
 	}
 }
 
-//设置TIM1通道1的占空比
-//compare:比较值（0~arr）
+//????TIM1???1??????
+//compare:??????0~arr??
 void TIM_SetTIM1Compare1(u32 compare)
 {
 	TIM1->CCR1=compare; 
 }
 
-//定时器1中断服务函数
+//?????1?????????
 void TIM1_UP_TIM10_IRQHandler(void)
 {
-    HAL_TIM_IRQHandler(&TIM1_Handler);
+    if(__HAL_TIM_GET_FLAG(&TIM1_Handler, TIM_FLAG_UPDATE) != RESET)
+    {
+        if(__HAL_TIM_GET_IT_SOURCE(&TIM1_Handler, TIM_IT_UPDATE) != RESET)
+        {
+            __HAL_TIM_CLEAR_IT(&TIM1_Handler, TIM_IT_UPDATE);
+            
+            // ???????????
+            if(pwm_burst_active && pwm_burst_count > 0)
+            {
+                pwm_burst_count--;
+                
+                // ????????0???PWM
+                if(pwm_burst_count == 0)
+                {
+                    Stop_Pwm();
+                    pwm_burst_active = 0;
+                }
+            }
+        }
+    }
 }
+
+void Start_Pwm(void)
+{   
+  	HAL_TIMEx_PWMN_Start(&TIM1_Handler, TIM_CHANNEL_2); //????CH2N
+    HAL_TIM_PWM_Start(&TIM1_Handler,TIM_CHANNEL_1); //?????????PWM
+
+}
+void Stop_Pwm(void)
+{
+    HAL_TIMEx_PWMN_Stop(&TIM1_Handler,TIM_CHANNEL_2); //?????????PWM	
+    HAL_TIM_PWM_Stop(&TIM1_Handler,TIM_CHANNEL_1); //????????PWM
+
+}
+
+// ?????????????????????
+void Start_Pwm_Burst(uint32_t pulse_count)
+{
+    // ???????????
+    pwm_burst_count = pulse_count;
+    pwm_burst_active = 1;
+    
+    // ????PWM
+    __HAL_TIM_SET_COUNTER(&TIM1_Handler, 0);
+    Start_Pwm();
+}
+

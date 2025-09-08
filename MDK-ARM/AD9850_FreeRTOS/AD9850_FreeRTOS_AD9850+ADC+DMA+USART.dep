@@ -1,7 +1,7 @@
 Dependencies for Project 'AD9850_FreeRTOS', Target 'AD9850+ADC+DMA+USART': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f411xe.s)(0x68776865)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 535" --pd "_RTE_ SETA 1" --pd "STM32F411xE SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f411xe.lst --xref -o ad9850_freertos\startup_stm32f411xe.o --depend ad9850_freertos\startup_stm32f411xe.d)
-F (../Core/Src/main.c)(0x688F669B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\main.o --omf_browse ad9850_freertos\main.crf --depend ad9850_freertos\main.d)
+F (../Core/Src/main.c)(0x68C42CAD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\main.o --omf_browse ad9850_freertos\main.crf --depend ad9850_freertos\main.d)
 I (../Core/Inc/main.h)(0x68776405)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x687132D3)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x687B9AB8)
@@ -57,7 +57,7 @@ I (../Core/Inc/usart.h)(0x687B56B2)
 I (../Core/Inc/gpio.h)(0x68776902)
 I (../Core/Inc/AD985x.h)(0x68777DC8)
 I (../Core/Inc/sys.h)(0x6877733E)
-I (../Core/Inc/pwm.h)(0x688C7B3B)
+I (../Core/Inc/pwm.h)(0x68C67F11)
 I (../Core/Inc/delay.h)(0x688F668F)
 F (../Core/Src/gpio.c)(0x687775E3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\gpio.o --omf_browse ad9850_freertos\gpio.crf --depend ad9850_freertos\gpio.d)
 I (../Core/Inc/gpio.h)(0x68776902)
@@ -95,7 +95,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x687132D3)
-F (../Core/Src/freertos.c)(0x688DE056)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\freertos.o --omf_browse ad9850_freertos\freertos.crf --depend ad9850_freertos\freertos.d)
+F (../Core/Src/freertos.c)(0x68C67F4D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\freertos.o --omf_browse ad9850_freertos\freertos.crf --depend ad9850_freertos\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6871327E)
 I (D:\software\Keil\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\software\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -151,7 +151,8 @@ I (../Core/Inc/adc.h)(0x687B695A)
 I (../Core/Inc/usart.h)(0x687B56B2)
 I (../Core/Inc/tim.h)(0x687B5C97)
 I (../Core/Inc/dma.h)(0x687B56B2)
-I (../Core/Inc/pwm.h)(0x688C7B3B)
+I (../Core/Inc/pwm.h)(0x68C67F11)
+I (../Core/Inc/delay.h)(0x688F668F)
 F (../Core/Src/stm32f4xx_it.c)(0x687BA50A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\stm32f4xx_it.o --omf_browse ad9850_freertos\stm32f4xx_it.crf --depend ad9850_freertos\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x68776405)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x687132D3)
@@ -473,8 +474,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x687132D3)
 I (D:\software\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
-F (..\Core\Src\pwm.c)(0x688DCFC1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\pwm.o --omf_browse ad9850_freertos\pwm.crf --depend ad9850_freertos\pwm.d)
-I (../Core/Inc/pwm.h)(0x688C7B3B)
+F (..\Core\Src\pwm.c)(0x68C688CB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\pwm.o --omf_browse ad9850_freertos\pwm.crf --depend ad9850_freertos\pwm.d)
+I (../Core/Inc/pwm.h)(0x68C67F11)
 I (../Core/Inc/sys.h)(0x6877733E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x687132D3)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x687B9AB8)
@@ -509,6 +510,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x687132D3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x687132D3)
+I (../Core/Inc/main.h)(0x68776405)
 F (..\Core\Src\delay.c)(0x688F65FB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy-I.\RTE\_AD9850_ADC_DMA_USART-ID:\software\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F411xE -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F411xE-o ad9850_freertos\delay.o --omf_browse ad9850_freertos\delay.crf --depend ad9850_freertos\delay.d)
 I (../Core/Inc/delay.h)(0x688F668F)
 I (../Core/Inc/main.h)(0x68776405)
