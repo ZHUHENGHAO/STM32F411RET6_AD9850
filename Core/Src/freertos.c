@@ -34,6 +34,7 @@
 #include "tim.h"
 #include "dma.h"
 #include "pwm.h"
+#include "delay.h"
 
 /* USER CODE END Includes */
 
@@ -382,9 +383,9 @@ void PWM_Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		 TIM_SetTIM1Compare1(50);
-		 osDelay(1);              
-		 TIM_SetTIM1Compare1(0);
+		 Start_Pwm();		 
+		 delay_us(50);              
+		 Stop_Pwm();
 		 osDelay(100);
   }
   /* USER CODE END LED_Task */

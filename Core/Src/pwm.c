@@ -22,7 +22,7 @@ void TIM1_PWM_Init(u16 arr,u16 psc)
     
     //配置CH1主通道及CH1N互补通道
     TIM1_CH1Handler.OCMode=TIM_OCMODE_PWM1; //模式选择PWM1
-    TIM1_CH1Handler.Pulse=0;            //设置比较值,占空比50%
+    TIM1_CH1Handler.Pulse=50;            //设置比较值,占空比50%
     TIM1_CH1Handler.OCPolarity=TIM_OCPOLARITY_HIGH; //主通道输出极性高
     TIM1_CH1Handler.OCNPolarity=TIM_OCPOLARITY_HIGH;//互补通道输出极性
     TIM1_CH1Handler.OCFastMode=TIM_OCFAST_DISABLE; //禁止快速模式
@@ -31,17 +31,17 @@ void TIM1_PWM_Init(u16 arr,u16 psc)
     HAL_TIM_PWM_ConfigChannel(&TIM1_Handler,&TIM1_CH1Handler,TIM_CHANNEL_1);//配置TIM1通道1
 	
 //    //配置死区时间（防止上下桥臂直通）
-//    TIM1_DeadTimeHandler.OffStateRunMode=TIM_OSSR_DISABLE; //运行模式下关闭状态选择
-//    TIM1_DeadTimeHandler.OffStateIDLEMode=TIM_OSSI_DISABLE; //空闲模式下关闭状态选择
-//    TIM1_DeadTimeHandler.LockLevel=TIM_LOCKLEVEL_OFF; //锁定级别关闭
-//    TIM1_DeadTimeHandler.DeadTime=10; //死区时间（单位：定时器时钟周期，需根据实际需求调整）
-//    TIM1_DeadTimeHandler.BreakState=TIM_BREAK_DISABLE; //禁止刹车功能
-//    TIM1_DeadTimeHandler.BreakPolarity=TIM_BREAKPOLARITY_HIGH; //刹车信号极性
-//    TIM1_DeadTimeHandler.AutomaticOutput=TIM_AUTOMATICOUTPUT_DISABLE; //禁止自动输出
-//    HAL_TIMEx_ConfigBreakDeadTime(&TIM1_Handler,&TIM1_DeadTimeHandler);
+    TIM1_DeadTimeHandler.OffStateRunMode=TIM_OSSR_DISABLE; //运行模式下关闭状态选择
+    TIM1_DeadTimeHandler.OffStateIDLEMode=TIM_OSSI_DISABLE; //空闲模式下关闭状态选择
+    TIM1_DeadTimeHandler.LockLevel=TIM_LOCKLEVEL_OFF; //锁定级别关闭
+    TIM1_DeadTimeHandler.DeadTime=2; //死区时间（单位：定时器时钟周期，需根据实际需求调整）
+    TIM1_DeadTimeHandler.BreakState=TIM_BREAK_DISABLE; //禁止刹车功能
+    TIM1_DeadTimeHandler.BreakPolarity=TIM_BREAKPOLARITY_HIGH; //刹车信号极性
+    TIM1_DeadTimeHandler.AutomaticOutput=TIM_AUTOMATICOUTPUT_DISABLE; //禁止自动输出
+    HAL_TIMEx_ConfigBreakDeadTime(&TIM1_Handler,&TIM1_DeadTimeHandler);
 	
-    HAL_TIM_PWM_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启主通道PWM
-    HAL_TIMEx_PWMN_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启互补通道PWM
+//    HAL_TIM_PWM_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启主通道PWM
+//    HAL_TIMEx_PWMN_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启互补通道PWM
 	 	   
 }
 
@@ -85,3 +85,14 @@ void TIM1_UP_TIM10_IRQHandler(void)
 {
     HAL_TIM_IRQHandler(&TIM1_Handler);
 }
+void Start_Pwm(void)
+{
+    HAL_TIM_PWM_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启主通道PWM
+    HAL_TIMEx_PWMN_Start(&TIM1_Handler,TIM_CHANNEL_1); //开启互补通道PWM
+}
+void Stop_Pwm(void)
+{
+    HAL_TIM_PWM_Stop(&TIM1_Handler,TIM_CHANNEL_1); //关闭主通道PWM
+    HAL_TIMEx_PWMN_Stop(&TIM1_Handler,TIM_CHANNEL_1); //关闭互补通道PWM
+}
+
