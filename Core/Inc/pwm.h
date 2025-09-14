@@ -11,7 +11,10 @@ void TIM_SetTIM1Compare1(u32 compare);
 
 void Start_Pwm(void);
 void Stop_Pwm(void);
+<<<<<<< HEAD
 void Start_Pwm_Burst(uint32_t pulse_count);
+=======
+>>>>>>> Github_STM32F411_AD9850/main
 
 #endif
 

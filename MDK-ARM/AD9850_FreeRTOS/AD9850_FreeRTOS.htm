@@ -3,7 +3,11 @@
 <title>Static Call Graph - [AD9850_FreeRTOS\AD9850_FreeRTOS.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image AD9850_FreeRTOS\AD9850_FreeRTOS.axf</H1><HR>
+<<<<<<< HEAD
 <BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Sep 14 17:20:17 2025
+=======
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Sep 06 19:23:18 2025
+>>>>>>> Github_STM32F411_AD9850/main
 <BR><P>
 <H3>Maximum Stack Usage =        440 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -114,7 +118,11 @@ Global Symbols
 <P><STRONG><a name="[45]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(.text)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[108]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+=======
+<P><STRONG><a name="[107]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[53]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -124,6 +132,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[109]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
 <P><STRONG><a name="[10a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
@@ -135,16 +144,38 @@ Global Symbols
 <P><STRONG><a name="[10d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[10e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+=======
+<P><STRONG><a name="[108]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+
+<P><STRONG><a name="[109]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+
+<P><STRONG><a name="[10a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+
+<P><STRONG><a name="[10b]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+
+<P><STRONG><a name="[10c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+
+<P><STRONG><a name="[10d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[102]"></a>__asm___6_port_c_39a90d8d__prvStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
 <P><STRONG><a name="[101]"></a>__asm___6_port_c_39a90d8d__prvEnableVFP</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+=======
+<P><STRONG><a name="[101]"></a>__asm___6_port_c_39a90d8d__prvStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+</UL>
+
+<P><STRONG><a name="[100]"></a>__asm___6_port_c_39a90d8d__prvEnableVFP</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, port.o(.emb_text))
@@ -152,8 +183,13 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[fa]"></a>vPortGetIPSR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
+=======
+<P><STRONG><a name="[f9]"></a>vPortGetIPSR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f411xe.o(.text))
@@ -335,9 +371,15 @@ Global Symbols
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e6]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
+=======
+<P><STRONG><a name="[e5]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[be]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
@@ -345,22 +387,33 @@ Global Symbols
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[10f]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[10e]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[5a]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memset
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[110]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[111]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[10f]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[110]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[59]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
 <P><STRONG><a name="[7d]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<<<<<<< HEAD
 <BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
@@ -368,6 +421,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[112]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+=======
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+</UL>
+
+<P><STRONG><a name="[111]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[5b]"></a>memset</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -389,7 +451,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Convert_Freq
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[113]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[112]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[cf]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -400,7 +466,11 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[114]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[113]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[57]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
@@ -408,9 +478,15 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[115]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[116]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[114]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+
+<P><STRONG><a name="[115]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[5f]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
@@ -434,7 +510,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[117]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[116]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[4f]"></a>AD9850CTR_Task</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, freertos.o(i.AD9850CTR_Task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = AD9850CTR_Task &rArr; AD985x_SetFre_Phase &rArr; AD985x_wr_serial &rArr; Convert_Freq &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
@@ -558,10 +638,17 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(RESET)
 </UL>
 <P><STRONG><a name="[80]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
+<<<<<<< HEAD
 <BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+=======
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[b9]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 334 bytes, Stack size 20 bytes, stm32f4xx_hal_adc.o(i.HAL_ADC_ConfigChannel))
@@ -666,10 +753,17 @@ Global Symbols
 <P><STRONG><a name="[7e]"></a>HAL_GPIO_Init</STRONG> (Thumb, 446 bytes, Stack size 40 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+=======
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[75]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
@@ -685,7 +779,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[83]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
+<<<<<<< HEAD
 <BR><BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+=======
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+>>>>>>> Github_STM32F411_AD9850/main
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
@@ -732,7 +831,10 @@ Global Symbols
 <P><STRONG><a name="[8f]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<<<<<<< HEAD
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
+=======
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[90]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
@@ -743,7 +845,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<<<<<<< HEAD
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
+=======
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[88]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
@@ -814,7 +919,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxNChannelCmd
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
+=======
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[97]"></a>HAL_TIMEx_PWMN_Stop</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, stm32f4xx_hal_tim_ex.o(i.HAL_TIMEx_PWMN_Stop))
@@ -856,12 +965,21 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9a]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 220 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_ConfigClockSource))
+<<<<<<< HEAD
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_TIM_ConfigClockSource &rArr; TIM_ETR_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ETR_SetConfig
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI2_ConfigInputStage
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI1_ConfigInputStage
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITRx_SetConfig
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_TIM_ConfigClockSource &rArr; TIM_TI2_ConfigInputStage
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI2_ConfigInputStage
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI1_ConfigInputStage
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITRx_SetConfig
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ETR_SetConfig
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
 </UL>
@@ -889,18 +1007,31 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a7]"></a>HAL_TIM_PWM_ConfigChannel</STRONG> (Thumb, 204 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_ConfigChannel))
+<<<<<<< HEAD
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC2_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2_SetConfig
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC4_SetConfig
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC4_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC4_SetConfig
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2_SetConfig
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_PWM_Init
 </UL>
 
 <P><STRONG><a name="[ac]"></a>HAL_TIM_PWM_Init</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Init))
+<<<<<<< HEAD
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
@@ -908,8 +1039,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_PWM_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ad]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, pwm.o(i.HAL_TIM_PWM_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
+=======
+<P><STRONG><a name="[ad]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, pwm.o(i.HAL_TIM_PWM_MspInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
@@ -927,7 +1063,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
+=======
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[b0]"></a>HAL_TIM_PWM_Stop</STRONG> (Thumb, 108 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Stop))
@@ -994,9 +1134,15 @@ Global Symbols
 <P><STRONG><a name="[b8]"></a>MX_ADC1_Init</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, adc.o(i.MX_ADC1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_ADC1_Init &rArr; HAL_ADC_Init &rArr; HAL_ADC_MspInit &rArr; HAL_GPIO_Init
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+=======
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1065,24 +1211,40 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[52]"></a>PWM_Task</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, freertos.o(i.PWM_Task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + In Cycle
 <LI>Call Chain = PWM_Task &rArr;  PWM_Task (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm_Burst
+=======
+<P><STRONG><a name="[52]"></a>PWM_Task</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, freertos.o(i.PWM_Task))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + In Cycle
+<LI>Call Chain = PWM_Task &rArr;  PWM_Task (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Pwm
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
+>>>>>>> Github_STM32F411_AD9850/main
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[c6]"></a>Start_Pwm</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, pwm.o(i.Start_Pwm))
+=======
+<P><STRONG><a name="[c5]"></a>Start_Pwm</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, pwm.o(i.Start_Pwm))
+>>>>>>> Github_STM32F411_AD9850/main
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Start_Pwm &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_PWMN_Start
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm_Burst
 </UL>
 
@@ -1091,6 +1253,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Pwm
 </UL>
+=======
+>>>>>>> Github_STM32F411_AD9850/main
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
 </UL>
 
@@ -1100,7 +1264,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_PWMN_Stop
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_TIM10_IRQHandler
+=======
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, port.o(i.SysTick_Handler))
@@ -1123,7 +1291,11 @@ Global Symbols
 <P><STRONG><a name="[44]"></a>SystemInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, system_stm32f4xx.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(.text)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[ca]"></a>TIM1_PWM_Init</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, pwm.o(i.TIM1_PWM_Init))
+=======
+<P><STRONG><a name="[ca]"></a>TIM1_PWM_Init</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, pwm.o(i.TIM1_PWM_Init))
+>>>>>>> Github_STM32F411_AD9850/main
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = TIM1_PWM_Init &rArr; HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
@@ -1136,7 +1308,11 @@ Global Symbols
 <P><STRONG><a name="[1f]"></a>TIM1_UP_TIM10_IRQHandler</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, pwm.o(i.TIM1_UP_TIM10_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = TIM1_UP_TIM10_IRQHandler &rArr; Stop_Pwm &rArr; HAL_TIMEx_PWMN_Stop &rArr; TIM_CCxNChannelCmd
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Pwm
+=======
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f411xe.o(RESET)
 </UL>
@@ -1184,7 +1360,11 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[118]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+=======
+<P><STRONG><a name="[117]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+>>>>>>> Github_STM32F411_AD9850/main
 
 <P><STRONG><a name="[71]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -1192,6 +1372,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Process_Task
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[119]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
 <P><STRONG><a name="[11a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
@@ -1202,8 +1383,21 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = delay_us &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+=======
+<P><STRONG><a name="[118]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[119]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[11a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[c6]"></a>delay_us</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, delay.o(i.delay_us))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = delay_us &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+>>>>>>> Github_STM32F411_AD9850/main
+</UL>
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[49]"></a>fputc</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, usart.o(i.fputc))
@@ -1212,8 +1406,13 @@ Global Symbols
 <P><STRONG><a name="[43]"></a>main</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = main &rArr; MX_FREERTOS_Init &rArr; osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+=======
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+>>>>>>> Github_STM32F411_AD9850/main
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_PWM_Init
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
@@ -1231,7 +1430,11 @@ Global Symbols
 <P><STRONG><a name="[64]"></a>osDelay</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cmsis_os.o(i.osDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+=======
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Task
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Task
@@ -1240,10 +1443,17 @@ Global Symbols
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD9850init_Task
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d2]"></a>osKernelStart</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osKernelStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = osKernelStart &rArr; vTaskStartScheduler &rArr; xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+=======
+<P><STRONG><a name="[d1]"></a>osKernelStart</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osKernelStart))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = osKernelStart &rArr; vTaskStartScheduler &rArr; xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1251,8 +1461,13 @@ Global Symbols
 <P><STRONG><a name="[bd]"></a>osMessageCreate</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cmsis_os.o(i.osMessageCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = osMessageCreate &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+=======
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
@@ -1261,8 +1476,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = osSemaphoreCreate &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<<<<<<< HEAD
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+=======
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
@@ -1271,8 +1491,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = osSemaphoreRelease &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<<<<<<< HEAD
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inHandlerMode
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGiveFromISR
+=======
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inHandlerMode
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGiveFromISR
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
 </UL>
@@ -1280,9 +1505,15 @@ Global Symbols
 <P><STRONG><a name="[70]"></a>osSemaphoreWait</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, cmsis_os.o(i.osSemaphoreWait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = osSemaphoreWait &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inHandlerMode
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceiveFromISR
+=======
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inHandlerMode
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceiveFromISR
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Process_Task
 </UL>
@@ -1290,13 +1521,20 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>osThreadCreate</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, cmsis_os.o(i.osThreadCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+=======
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[f4]"></a>pvPortMalloc</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
@@ -1424,22 +1662,161 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+=======
+<P><STRONG><a name="[f3]"></a>pvPortMalloc</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+</UL>
+
+<P><STRONG><a name="[105]"></a>pvTaskIncrementMutexHeldCount</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tasks.o(i.pvTaskIncrementMutexHeldCount))
+<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[ee]"></a>pxPortInitialiseStack</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, port.o(i.pxPortInitialiseStack))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = pxPortInitialiseStack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+</UL>
+
+<P><STRONG><a name="[dd]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+</UL>
+
+<P><STRONG><a name="[fd]"></a>vApplicationGetIdleTaskMemory</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, freertos.o(i.vApplicationGetIdleTaskMemory))
+<BR><BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+</UL>
+
+<P><STRONG><a name="[e2]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
+<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+</UL>
+
+<P><STRONG><a name="[ed]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
+<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+</UL>
+
+<P><STRONG><a name="[df]"></a>vListInsert</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, list.o(i.vListInsert))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = vListInsert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+</UL>
+
+<P><STRONG><a name="[de]"></a>vListInsertEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, list.o(i.vListInsertEnd))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+</UL>
+
+<P><STRONG><a name="[e1]"></a>vPortEnterCritical</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+</UL>
+
+<P><STRONG><a name="[e3]"></a>vPortExitCritical</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+</UL>
+
+<P><STRONG><a name="[e9]"></a>vPortFree</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+</UL>
+
+<P><STRONG><a name="[ff]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, port.o(i.vPortSetupTimerInterrupt))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+</UL>
+
+<P><STRONG><a name="[f8]"></a>vPortValidateInterruptPriority</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, port.o(i.vPortValidateInterruptPriority))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = vPortValidateInterruptPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortGetIPSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceiveFromISR
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGiveFromISR
+</UL>
+
+<P><STRONG><a name="[d0]"></a>vTaskDelay</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tasks.o(i.vTaskDelay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[65]"></a>vTaskDelete</STRONG> (Thumb, 158 bytes, Stack size 16 bytes, tasks.o(i.vTaskDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = vTaskDelete &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+=======
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init_Task
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD9850init_Task
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[104]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskInternalSetTimeOutState))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -1488,12 +1865,63 @@ Global Symbols
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+=======
+<P><STRONG><a name="[103]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskInternalSetTimeOutState))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[f2]"></a>vTaskMissedYield</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tasks.o(i.vTaskMissedYield))
+<BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+</UL>
+
+<P><STRONG><a name="[fb]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tasks.o(i.vTaskPlaceOnEventList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[fc]"></a>vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, tasks.o(i.vTaskPriorityDisinheritAfterTimeout))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = vTaskPriorityDisinheritAfterTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[d2]"></a>vTaskStartScheduler</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, tasks.o(i.vTaskStartScheduler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = vTaskStartScheduler &rArr; xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetIdleTaskMemory
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
+</UL>
+
+<P><STRONG><a name="[f4]"></a>vTaskSuspendAll</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[55]"></a>vTaskSwitchContext</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, tasks.o(i.vTaskSwitchContext))
 <BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ff]"></a>xPortStartScheduler</STRONG> (Thumb, 222 bytes, Stack size 16 bytes, port.o(i.xPortStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xPortStartScheduler
 </UL>
@@ -1509,20 +1937,45 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+=======
+<P><STRONG><a name="[fe]"></a>xPortStartScheduler</STRONG> (Thumb, 222 bytes, Stack size 16 bytes, port.o(i.xPortStartScheduler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xPortStartScheduler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvEnableVFP
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvStartFirstTask
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+</UL>
+
+<P><STRONG><a name="[d4]"></a>xQueueGenericCreate</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, queue.o(i.xQueueGenericCreate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreCreate
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageCreate
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d4]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericCreateStatic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xQueueGenericCreateStatic &rArr; prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+=======
+<P><STRONG><a name="[d3]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericCreateStatic))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xQueueGenericCreateStatic &rArr; prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreCreate
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageCreate
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ec]"></a>xQueueGenericReset</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
@@ -1532,11 +1985,23 @@ Global Symbols
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 </UL>
 <BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+=======
+<P><STRONG><a name="[eb]"></a>xQueueGenericReset</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericReset))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[77]"></a>xQueueGenericSend</STRONG> (Thumb, 346 bytes, Stack size 56 bytes, queue.o(i.xQueueGenericSend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
@@ -1548,17 +2013,38 @@ Global Symbols
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+=======
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreRelease
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreCreate
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Button_Task
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d7]"></a>xQueueGiveFromISR</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, queue.o(i.xQueueGiveFromISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGiveFromISR &rArr; xTaskRemoveFromEventList
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
+=======
+<P><STRONG><a name="[d6]"></a>xQueueGiveFromISR</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, queue.o(i.xQueueGiveFromISR))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGiveFromISR &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreRelease
 </UL>
@@ -1566,6 +2052,7 @@ Global Symbols
 <P><STRONG><a name="[61]"></a>xQueueReceive</STRONG> (Thumb, 308 bytes, Stack size 56 bytes, queue.o(i.xQueueReceive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = xQueueReceive &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
@@ -1578,21 +2065,45 @@ Global Symbols
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+=======
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Task
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AD9850CTR_Task
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d8]"></a>xQueueReceiveFromISR</STRONG> (Thumb, 154 bytes, Stack size 32 bytes, queue.o(i.xQueueReceiveFromISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xQueueReceiveFromISR &rArr; xTaskRemoveFromEventList
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
+=======
+<P><STRONG><a name="[d7]"></a>xQueueReceiveFromISR</STRONG> (Thumb, 154 bytes, Stack size 32 bytes, queue.o(i.xQueueReceiveFromISR))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xQueueReceiveFromISR &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreWait
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d9]"></a>xQueueSemaphoreTake</STRONG> (Thumb, 372 bytes, Stack size 48 bytes, queue.o(i.xQueueSemaphoreTake))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
@@ -1610,10 +2121,30 @@ Global Symbols
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+=======
+<P><STRONG><a name="[d8]"></a>xQueueSemaphoreTake</STRONG> (Thumb, 372 bytes, Stack size 48 bytes, queue.o(i.xQueueSemaphoreTake))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreWait
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[105]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, tasks.o(i.xTaskCheckForTimeOut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskCheckForTimeOut
 </UL>
@@ -1633,10 +2164,32 @@ Global Symbols
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+=======
+<P><STRONG><a name="[104]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, tasks.o(i.xTaskCheckForTimeOut))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskCheckForTimeOut
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[db]"></a>xTaskCreate</STRONG> (Thumb, 90 bytes, Stack size 56 bytes, tasks.o(i.xTaskCreate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[db]"></a>xTaskCreateStatic</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, tasks.o(i.xTaskCreateStatic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
@@ -1651,6 +2204,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+=======
+<P><STRONG><a name="[da]"></a>xTaskCreateStatic</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, tasks.o(i.xTaskCreateStatic))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+</UL>
+
+<P><STRONG><a name="[102]"></a>xTaskGetSchedulerState</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tasks.o(i.xTaskGetSchedulerState))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[76]"></a>xTaskGetTickCount</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, tasks.o(i.xTaskGetTickCount))
@@ -1660,6 +2229,7 @@ Global Symbols
 <P><STRONG><a name="[c8]"></a>xTaskIncrementTick</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, tasks.o(i.xTaskIncrementTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
@@ -1717,6 +2287,65 @@ Global Symbols
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+=======
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+
+<P><STRONG><a name="[e7]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityDisinherit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskPriorityDisinherit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+</UL>
+
+<P><STRONG><a name="[106]"></a>xTaskPriorityInherit</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityInherit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskPriorityInherit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[f1]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, tasks.o(i.xTaskRemoveFromEventList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceiveFromISR
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGiveFromISR
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+</UL>
+
+<P><STRONG><a name="[f7]"></a>xTaskResumeAll</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, tasks.o(i.xTaskResumeAll))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <P>
 <H3>
@@ -1829,6 +2458,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e5]"></a>prvCopyDataFromQueue</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, queue.o(i.prvCopyDataFromQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvCopyDataFromQueue
 </UL>
@@ -1843,10 +2473,27 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+=======
+<P><STRONG><a name="[e4]"></a>prvCopyDataFromQueue</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, queue.o(i.prvCopyDataFromQueue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvCopyDataFromQueue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceiveFromISR
+</UL>
+
+<P><STRONG><a name="[e6]"></a>prvCopyDataToQueue</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, queue.o(i.prvCopyDataToQueue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvCopyDataToQueue &rArr; xTaskPriorityDisinherit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[eb]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseNewQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
@@ -1906,6 +2553,67 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+=======
+<P><STRONG><a name="[ea]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseNewQueue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+</UL>
+
+<P><STRONG><a name="[ef]"></a>prvIsQueueEmpty</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, queue.o(i.prvIsQueueEmpty))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvIsQueueEmpty
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[f0]"></a>prvUnlockQueue</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, queue.o(i.prvUnlockQueue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = prvUnlockQueue &rArr; xTaskRemoveFromEventList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+</UL>
+
+<P><STRONG><a name="[dc]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, tasks.o(i.prvAddCurrentTaskToDelayedList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = prvAddCurrentTaskToDelayedList &rArr; vListInsert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+</UL>
+
+<P><STRONG><a name="[e0]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, tasks.o(i.prvAddNewTaskToReadyList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = prvAddNewTaskToReadyList
+</UL>
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+</UL>
+<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+</UL>
+
+<P><STRONG><a name="[e8]"></a>prvDeleteTCB</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, tasks.o(i.prvDeleteTCB))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
@@ -1914,6 +2622,7 @@ Local Symbols
 <P><STRONG><a name="[4b]"></a>prvIdleTask</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, tasks.o(i.prvIdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvIdleTask &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
@@ -1938,10 +2647,37 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[d6]"></a>inHandlerMode</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.inHandlerMode))
+=======
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> tasks.o(i.vTaskStartScheduler)
+</UL>
+<P><STRONG><a name="[ec]"></a>prvInitialiseNewTask</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, tasks.o(i.prvInitialiseNewTask))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewTask &rArr; pxPortInitialiseStack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+</UL>
+
+<P><STRONG><a name="[fa]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tasks.o(i.prvResetNextTaskUnblockTime))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+</UL>
+
+<P><STRONG><a name="[d5]"></a>inHandlerMode</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.inHandlerMode))
+>>>>>>> Github_STM32F411_AD9850/main
 <BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreWait
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreRelease
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[da]"></a>makeFreeRtosPriority</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.makeFreeRtosPriority))
 <BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
@@ -1955,6 +2691,21 @@ Local Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+=======
+<P><STRONG><a name="[d9]"></a>makeFreeRtosPriority</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.makeFreeRtosPriority))
+<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+</UL>
+
+<P><STRONG><a name="[f5]"></a>prvHeapInit</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, heap_4.o(i.prvHeapInit))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+</UL>
+
+<P><STRONG><a name="[f6]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = prvInsertBlockIntoFreeList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+>>>>>>> Github_STM32F411_AD9850/main
 </UL>
 
 <P><STRONG><a name="[4a]"></a>prvTaskExitError</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(i.prvTaskExitError))

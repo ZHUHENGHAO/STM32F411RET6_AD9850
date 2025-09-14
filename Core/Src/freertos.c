@@ -383,6 +383,7 @@ void PWM_Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+<<<<<<< HEAD
      Start_Pwm_Burst(50);
 //		TIM_SetTIM1Compare1(25);		
 //		Start_Pwm();
@@ -390,6 +391,11 @@ void PWM_Task(void const * argument)
 //		
 ////		TIM_SetTIM1Compare1(0);
 //		Stop_Pwm();
+=======
+		 Start_Pwm();		 
+		 delay_us(50);              
+		 Stop_Pwm();
+>>>>>>> Github_STM32F411_AD9850/main
 		 osDelay(100);
   }
   /* USER CODE END LED_Task */
