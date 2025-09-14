@@ -175,3 +175,5 @@ void Start_Pwm_Burst(uint32_t pulse_count)
     __HAL_TIM_SET_COUNTER(&TIM1_Handler, 0); // 重置计数器，确保脉冲计数准确
     Start_Pwm(); // 启动PWM
 }
+
+
