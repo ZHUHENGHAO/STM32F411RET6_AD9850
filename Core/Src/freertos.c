@@ -55,7 +55,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-uint16_t adc_buf[250] = {0};     // ÐÂÔö
+uint16_t adc_buf[250] = {0};     // ï¿½ï¿½ï¿½ï¿½
 /* USER CODE END Variables */
 
 osThreadId LEDTaskHandle;
@@ -73,8 +73,8 @@ osMessageQId Freq_QueueHandle;
 uint8_t Freq_QueueBuffer[ 1 * sizeof( double ) ];
 osStaticMessageQDef_t Freq_QueueControlBlock;
 
-osSemaphoreId ADCDMA_SemHandle;  // ÐÂÔö
-osStaticSemaphoreDef_t ADCDMA_SemControlBlock;  // ÐÂÔö
+osSemaphoreId ADCDMA_SemHandle;  // ï¿½ï¿½ï¿½ï¿½
+osStaticSemaphoreDef_t ADCDMA_SemControlBlock;  // ï¿½ï¿½ï¿½ï¿½
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
@@ -84,8 +84,8 @@ void LED_Task(void const * argument);
 void Button_Task(void const * argument);
 void AD9850init_Task(void const * argument);
 void AD9850CTR_Task(void const * argument);
-void ADC_Init_Task(void const *argument);  // ÐÂÔö£ºADC³õÊ¼»¯ÈÎÎñ
-void ADC_Process_Task(void const *argument);  // ÐÂÔö£ºADCÊý¾Ý´¦ÀíÈÎÎñ
+void ADC_Init_Task(void const *argument);  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADCï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+void ADC_Process_Task(void const *argument);  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADCï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void PWM_Task(void const * argument);
 
 
@@ -123,7 +123,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
-	// ´´½¨ÐÅºÅÁ¿£¨ÐÂÔö£ºÓÃÓÚDMAÍê³ÉÍ¨Öª£©
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½
   osSemaphoreStaticDef(ADCDMA_Sem, &ADCDMA_SemControlBlock);
   ADCDMA_SemHandle = osSemaphoreCreate(osSemaphore(ADCDMA_Sem), 1);
   /* USER CODE END RTOS_SEMAPHORES */
@@ -163,10 +163,10 @@ void MX_FREERTOS_Init(void) {
   AD9850CTRTaskHandle = osThreadCreate(osThread(AD9850CTRTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-	  // ÐÂÔö£ºADCÏà¹ØÈÎÎñ ³õÊ¼²É¼¯ÈÎÎñ Íê³ÉÒ»´ÎÔòÉ¾³ý
+	  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê¼ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
   osThreadDef(ADCTask, ADC_Init_Task, osPriorityHigh, 0, 128);
   ADCTaskHandle = osThreadCreate(osThread(ADCTask), NULL);
-	  //´¦Àí²É¼¯ÐÅÏ¢¡¢ÔÙ´ÎÆô¶¯ÈÎÎñ
+	  //ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   osThreadDef(ADCProcessTask, ADC_Process_Task, osPriorityNormal, 0, 256);
   ADCProcessTaskHandle = osThreadCreate(osThread(ADCProcessTask), NULL);
 	
@@ -187,17 +187,17 @@ void MX_FREERTOS_Init(void) {
 void LED_Task(void const * argument)
 {
   /* USER CODE BEGIN LED_Task */
-		uint32_t current_delay = 200;  // Ä¬ÈÏÑÓÊ±200ms
+		uint32_t current_delay = 200;  // Ä¬ï¿½ï¿½ï¿½ï¿½Ê±200ms
 
   /* Infinite loop */
   for(;;)
   {
-		/* ¼ì²é¶ÓÁÐÖÐÊÇ·ñ(·Ç¿Õ)ÓÐÐÂµÄÑÓÊ±Öµ ÊÇ·Ç¿ÕÔò°Ñ¶ÓÁÐÖÐµÄ×îÐÂµÄÖµ¶ÁÈ¡µ½current_delay */
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½(ï¿½Ç¿ï¿½)ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ê±Öµ ï¿½Ç·Ç¿ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Âµï¿½Öµï¿½ï¿½È¡ï¿½ï¿½current_delay */
 		if(xQueueReceive(Delayms_QueueHandle,&current_delay,0) == pdTRUE)
 		{
 		}
 	
-		 /* ·­×ªLED×´Ì¬ */
+		 /* ï¿½ï¿½×ªLED×´Ì¬ */
     HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN); 
 		osDelay(current_delay);
   }
@@ -227,16 +227,16 @@ void Button_Task(void const * argument)
   {
 		Current_Button_state =HAL_GPIO_ReadPin(BUTTON_GPIO_PORT,BUTTON_PIN);
 		
-		if(last_Button_state == GPIO_PIN_SET && Current_Button_state == GPIO_PIN_RESET)//ÏÂ½µÑØ °´¼ü°´ÏÂ
+		if(last_Button_state == GPIO_PIN_SET && Current_Button_state == GPIO_PIN_RESET)//ï¿½Â½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		{
-			start_times = xTaskGetTickCount();//ticks 1ms¼Ó1
+			start_times = xTaskGetTickCount();//ticks 1msï¿½ï¿½1
 		}
-		if(last_Button_state == GPIO_PIN_RESET && Current_Button_state == GPIO_PIN_SET)//ÉÏÉýÑØ °´¼üÊÍ·Å
+		if(last_Button_state == GPIO_PIN_RESET && Current_Button_state == GPIO_PIN_SET)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½
 		{
 			osDelay(20);
 			stop_times = xTaskGetTickCount()-start_times;
 
-			if(stop_times <= 1000)//¶Ì°´1sÄÚ
+			if(stop_times <= 1000)//ï¿½Ì°ï¿½1sï¿½ï¿½
 			{
 //				flag++;
 				current_index = (current_index+1)%(sizeof(delay_option)/sizeof(delay_option[0]));
@@ -244,12 +244,12 @@ void Button_Task(void const * argument)
 //				if(flag%2 == 1) TIM_SetTIM1Compare1(50);
 //				else TIM_SetTIM1Compare1(0);
 			}
-			if(stop_times >= 2000 && stop_times <= 3000)//¶Ì³¤°´2s-3sÄÚ
+			if(stop_times >= 2000 && stop_times <= 3000)//ï¿½Ì³ï¿½ï¿½ï¿½2s-3sï¿½ï¿½
 			{
 				DDS_Freq = 1000000;
 				xQueueSend(Freq_QueueHandle,&DDS_Freq,pdMS_TO_TICKS(10));
 			}
-			if(stop_times >= 3000 && stop_times <= 5000)//¶Ì³¤°´3s-5sÄÚ
+			if(stop_times >= 3000 && stop_times <= 5000)//ï¿½Ì³ï¿½ï¿½ï¿½3s-5sï¿½ï¿½
 			{
 				DDS_Freq = 10000;
 				xQueueSend(Freq_QueueHandle,&DDS_Freq,pdMS_TO_TICKS(10));
@@ -257,8 +257,8 @@ void Button_Task(void const * argument)
 		}
 		
 //		TIM_SetTIM1Compare1(0);
-		last_Button_state = Current_Button_state;//×´Ì¬¸üÐÂ
-		osDelay(10);//ÒòÎª°´¼üÈÎÎñµÄÓÅÏÈ¼¶×î¸ß£¬ÎªÁËÆäËûµÍÓÅÏÈ¼¶ÈÎÎñÄÜ¹»±»µ÷¶È£¬ÕâÀïÐèÒªÔÚÃ¿´ÎµÄÑ­»·ºóÈÃ³öCPU·½±ãÖ´ÐÐÆäËûÈÎÎñ
+		last_Button_state = Current_Button_state;//×´Ì¬ï¿½ï¿½ï¿½ï¿½
+		osDelay(10);//ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ß£ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ã¿ï¿½Îµï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½CPUï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 		
@@ -279,9 +279,9 @@ void AD9850init_Task(void const * argument)
 	double default_freq = 10000.0;
   /* Infinite loop */
 	AD985x_Init(AD9850,SERIAL);
-	AD985x_SetFre_Phase(default_freq,0);//ÉèÖÃÊä³öÆµÂÊ10KHz,ÏàÎ»0£»
+	AD985x_SetFre_Phase(default_freq,0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½10KHz,ï¿½ï¿½Î»0ï¿½ï¿½
 	osDelay(1000);
-	vTaskDelete(NULL);//³õÊ¼»¯ÎÈ¶¨Ò»¶ÎÊ±¼äºóÒÔºóÉ¾³ý³õÊ¼»¯ÈÎÎñ
+	vTaskDelete(NULL);//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½È¶ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ôºï¿½É¾ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   /* USER CODE END AD9850init_Task */
 	
 }
@@ -302,7 +302,7 @@ void AD9850CTR_Task(void const * argument)
   {
     if(xQueueReceive(Freq_QueueHandle,&freq,portMAX_DELAY))
 		{
-			AD985x_SetFre_Phase(freq,0);//ÉèÖÃÊä³öÆµÂÊfreqHz,ÏàÎ»0£»
+			AD985x_SetFre_Phase(freq,0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½freqHz,ï¿½ï¿½Î»0ï¿½ï¿½
 		}
   }
   /* USER CODE END AD9850CTR_Task */
@@ -312,65 +312,65 @@ void AD9850CTR_Task(void const * argument)
 /* USER CODE BEGIN Application */
 void ADC_Init_Task(void const * argument)
 {
-	  // Æô¶¯ADC+DMA
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 250);  // ADC1²É¼¯250µã
-  HAL_TIM_Base_Start(&htim3);  // Æô¶¯TIM3£¨´¥·¢ADC£©
+	  // ï¿½ï¿½ï¿½ï¿½ADC+DMA
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 250);  // ADC1ï¿½É¼ï¿½250ï¿½ï¿½
+  HAL_TIM_Base_Start(&htim3);  // ï¿½ï¿½ï¿½ï¿½TIM3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADCï¿½ï¿½
 
-  // ÈÎÎñÍê³ÉºóÉ¾³ý×ÔÉí
+  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   vTaskDelete(NULL);
 	
 }
 
 void ADC_Process_Task(void const * argument)
 {
-  uint8_t tx_buf[500];  // ÓÃÓÚUSART·¢ËÍµÄ»º³åÇø£¨250µã¡Á2×Ö½Ú£©
+  uint8_t tx_buf[500];  // ï¿½ï¿½ï¿½ï¿½USARTï¿½ï¿½ï¿½ÍµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½250ï¿½ï¿½ï¿½2ï¿½Ö½Ú£ï¿½
 
   for(;;) {
 			
-    // µÈ´ýDMAÍê³ÉÐÅºÅÁ¿ µÈ´ýÐÅºÅÁ¿Îª1²Å¼ÌÐøÍùÏÂÖ´ÐÐ£¬²¢ÇÒÐÅºÅÁ¿-1
+    // ï¿½È´ï¿½DMAï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ ï¿½È´ï¿½ï¿½Åºï¿½ï¿½ï¿½Îª1ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½-1
    if( osSemaphoreWait(ADCDMA_SemHandle, portMAX_DELAY) == osOK)
 	 {
-//    printf("ADC Data: ");  // Ç°×ºÌáÊ¾
-    // Êý¾Ý´¦Àí
+//    printf("ADC Data: ");  // Ç°×ºï¿½ï¿½Ê¾
+    // ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½
     for(uint16_t i = 0; i < 250; i++) {
-//      tx_buf[i*2] = (adc_buf[i] >> 8) & 0xFF;  // ¸ß8Î»
-//      tx_buf[i*2+1] = adc_buf[i] & 0xFF;       // µÍ8Î»
+//      tx_buf[i*2] = (adc_buf[i] >> 8) & 0xFF;  // ï¿½ï¿½8Î»
+//      tx_buf[i*2+1] = adc_buf[i] & 0xFF;       // ï¿½ï¿½8Î»
 			printf("%d\r\n", adc_buf[i]); 
     }
 
-//    // Í¨¹ýUSART1·¢ËÍÊý¾Ý 500ÊÇ×Ö½ÚÊý 100ÊÇ100msÉèÎª³¬Ê±Ê±¼ä
+//    // Í¨ï¿½ï¿½USART1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 500ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ 100ï¿½ï¿½100msï¿½ï¿½Îªï¿½ï¿½Ê±Ê±ï¿½ï¿½
 //    HAL_UART_Transmit(&huart1, tx_buf, 500, 100);
 
-    // ÖØÐÂÅäÖÃDMAºÍTIM3£¬¿ªÊ¼ÏÂÒ»ÂÖ²É¼¯
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DMAï¿½ï¿½TIM3ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ò»ï¿½Ö²É¼ï¿½
     HAL_TIM_Base_Stop(&htim3);
     HAL_ADC_Stop_DMA(&hadc1);
     
-    // Çå³ý±êÖ¾
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾
     __HAL_DMA_CLEAR_FLAG(&hdma_adc1, DMA_FLAG_TCIF0_4);
     __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_EOC);
     
-    // ÖØÐÂÆô¶¯
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		HAL_ADC_Start(&hadc1); 
     HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 250);
     HAL_TIM_Base_Start(&htim3);
-		osDelay(10);//ÈÃ³öCPU·½±ãÖ´ÐÐÆäËûÈÎÎñ
+		osDelay(10);//ï¿½Ã³ï¿½CPUï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   }
   }
 }
 
-// ÖÐ¶Ï·þÎñº¯Êý¶¼ ÔÚstm32f4xx_it.cÀïÃæ
-/* ÐÂÔö£ºDMAÍê³ÉÖÐ¶Ï´¦Àí */
+// ï¿½Ð¶Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½stm32f4xx_it.cï¿½ï¿½ï¿½ï¿½
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½Ð¶Ï´ï¿½ï¿½ï¿½ */
 void DMA2_Stream0_IRQHandler(void) {
   HAL_DMA_IRQHandler(&hdma_adc1);
 }
 
-/* ÐÂÔö£ºADC×ª»»Íê³É»Øµ÷º¯Êý */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADC×ªï¿½ï¿½ï¿½ï¿½É»Øµï¿½ï¿½ï¿½ï¿½ï¿½ */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
   if(hadc->Instance == ADC1) {
-    // Í£Ö¹TIM3£¨±ÜÃâ¼ÌÐø´¥·¢ADC£©
+    // Í£Ö¹TIM3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADCï¿½ï¿½
     HAL_TIM_Base_Stop(&htim3);
     
-    // ÊÍ·ÅÐÅºÅÁ¿£¬Í¨Öª´¦ÀíÈÎÎñ ÐÅºÅÁ¿£«1 ±äÎª¿ÉÓÃ×´Ì¬
+    // ï¿½Í·ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½1 ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½×´Ì¬
     osSemaphoreRelease(ADCDMA_SemHandle);
   }
 }
@@ -383,7 +383,6 @@ void PWM_Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-<<<<<<< HEAD
      Start_Pwm_Burst(50);
 //		TIM_SetTIM1Compare1(25);		
 //		Start_Pwm();
@@ -391,11 +390,6 @@ void PWM_Task(void const * argument)
 //		
 ////		TIM_SetTIM1Compare1(0);
 //		Stop_Pwm();
-=======
-		 Start_Pwm();		 
-		 delay_us(50);              
-		 Stop_Pwm();
->>>>>>> Github_STM32F411_AD9850/main
 		 osDelay(100);
   }
   /* USER CODE END LED_Task */
